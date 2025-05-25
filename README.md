@@ -83,4 +83,3 @@ pip install polib langdetect
 ## License
 
 MIT License.  
-Feel free to modify or adapt for your own workflow!
