@@ -1,6 +1,6 @@
 # PO File Merger
 
-A Python tool to batch-merge `.po` translation files for Mir Tankov (and any other game with gettext `.po` files).  
+A Python tool to batch-merge `.po` translation files for Mir Tankov (and other games).  
 It syncs English and Russian `.po` files by always **replacing Russian translations with their English counterparts** where available, preserving unmatched Russian entries.
 
 ---
@@ -28,27 +28,59 @@ You do **not** need to create the `merged` folder; the script will create it aut
 
 Your folder structure should look like this:
 
-📁 project_folder/
+```
+project_folder/
 │
 ├── merge_po_files.py
-├── 📁 en/
-│ ├── yourfile.po
-│ └── ...
-├── 📁 ru/
-│ ├── yourfile.po
-│ └── ...
-
+├── en/
+│   ├── yourfile.po
+│   └── ...
+├── ru/
+│   ├── yourfile.po
+│   └── ...
+```
 
 ### 2. From your project folder, run:
 
 ```sh
 python merge_po_files.py
+```
 
+#### Example Output
 
-
+```
 account_dashboard.po: Merged, replaced 24 entries.
 settings.po: English version of the file not found. Copied Russian file as-is.
 user_profile.po: Russian version of the file not found. Skipped, no file saved in merged.
 Done! All merged files saved in 'merged' folder.
+```
 
+---
 
+## Edge Cases
+
+- If a file exists in `ru/` but **not** in `en/`, it is copied unchanged to `merged/`.
+- If a file exists in `en/` but **not** in `ru/`, it is skipped—no file will appear in `merged/`, and a warning is printed.
+- All folders (`en`, `ru`, `merged`) are created if missing, so you never get a "folder not found" error.
+- The script detects and warns if it finds a possible language mismatch (e.g., if an "English" file appears to contain Russian or vice versa).
+
+---
+
+## Requirements
+
+- Python 3.x
+- [polib](https://pypi.org/project/polib/)
+- [langdetect](https://pypi.org/project/langdetect/)
+
+Install dependencies with:
+
+```sh
+pip install polib langdetect
+```
+
+---
+
+## License
+
+MIT License.  
+Feel free to modify or adapt for your own workflow!
