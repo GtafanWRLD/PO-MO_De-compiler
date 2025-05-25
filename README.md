@@ -18,20 +18,7 @@ Made to the easier mering .po files to MirTankov. Can be used for other games to
 - Provides clear terminal output about what actions were taken for each file.
 
 ---
-
-## Requirements
-
-- Python 3.x
-- [polib](https://pypi.org/project/polib/)
-- [langdetect](https://pypi.org/project/langdetect/)
-
-Install dependencies with:
-
-```sh
-pip install polib langdetect
-
-
-Usage
+##Usage
 1. Prepare your folders and files
 Place your Russian .po files in a folder named ru.
 
@@ -71,5 +58,20 @@ If a file exists in en/ but not in ru/, it is skipped—no file will appear in m
 All folders (en, ru, merged) are created if missing, so you never get a "folder not found" error.
 
 The script detects and warns if it finds a possible language mismatch (e.g., if an "English" file appears to contain Russian or vice versa).
+
+
+## Requirements
+
+- Python 3.x
+- [polib](https://pypi.org/project/polib/)
+- [langdetect](https://pypi.org/project/langdetect/)
+
+Install dependencies with:
+
+```sh
+pip install polib langdetect
+
+
+
 
 
