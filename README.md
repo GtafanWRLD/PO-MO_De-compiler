@@ -1,8 +1,8 @@
 # PO File Merger
 
-A Python tool to batch-merge `.po` translation files for games like World of Tanks.  
+A Python tool to batch-merge `.po` translation files for Mir Tankov. Can be used for different games as well.  
 It syncs English and Russian `.po` files by always **replacing Russian translations with their English counterparts** where available, preserving unmatched Russian entries.
-Made to the easier mering .po files to MirTankov. Can be used for other games too.
+
 ---
 
 
