@@ -18,7 +18,7 @@ Made to the easier mering .po files to MirTankov. Can be used for other games to
 - Provides clear terminal output about what actions were taken for each file.
 
 ---
-##Usage
+## Usage
 1. Prepare your folders and files
 Place your Russian .po files in a folder named ru.
 
