@@ -61,15 +61,6 @@ pip install polib
 
 ---
 
-## 📝 Recent Changes
-
-- 🔄 Full rewrite with interactive CLI (no args required)
-- 🔒 Added error handling and input validation
-- 📁 Organized output into structured folders
-- 🧠 File type detection logic cleaned up
-
----
-
 ## 📃 License
 
 MIT License.
